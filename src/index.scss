@@ -1,0 +1,72 @@
+@use "./assets/style/variables.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: $text-color;
+  background-image: linear-gradient(
+    185deg,
+    #e8edd1 0,
+    #e4eed3 6.25%,
+    #e0efd5 12.5%,
+    #dcefd7 18.75%,
+    #d9f0da 25%,
+    #d6f1dc 31.25%,
+    #d2f1e0 37.5%,
+    #d0f2e3 43.75%,
+    #cdf2e6 50%,
+    #cbf2e9 56.25%,
+    #c9f2ed 62.5%,
+    #c8f2f0 68.75%,
+    #c7f2f3 75%,
+    #c7f2f6 81.25%,
+    #c8f1f9 87.5%,
+    #c8f1fc 93.75%,
+    #caf0fe 100%
+  );
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+    background-image: url(./assets/images/body-texture.png);
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1560px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  font-family: $sub-font;
+
+  a {
+    font-size: 24px;
+    color: $accent-color-2;
+  }
+}

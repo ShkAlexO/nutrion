@@ -1,0 +1,19 @@
+@use "../../assets/style/variables.scss" as *;
+
+.logo {
+  display: flex;
+  width: fit-content;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  color: $primary-color;
+  padding: 0 15px 0 5px;
+  border-bottom: 4px solid $accent-color-3;
+  span {
+    display: block;
+    line-height: inherit;
+    &:last-child {
+      color: $secondary-color;
+    }
+  }
+}
