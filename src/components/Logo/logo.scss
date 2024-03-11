@@ -1,4 +1,4 @@
-@use "../../assets/style/variables.scss" as *;
+@use "/src/assets/style/variables.scss" as *;
 
 .logo {
   display: flex;
@@ -8,7 +8,7 @@
   line-height: 1;
   color: $primary-color;
   padding: 0 15px 0 5px;
-  border-bottom: 4px solid $accent-color-3;
+  border-bottom: 4px solid $accent-color-2;
   span {
     display: block;
     line-height: inherit;

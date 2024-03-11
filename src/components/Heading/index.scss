@@ -1,0 +1,12 @@
+.heading {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &__subtitle {
+    font-size: 20px;
+  }
+}

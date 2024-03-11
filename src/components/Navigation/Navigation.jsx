@@ -1,30 +1,39 @@
 import { NavLink } from "react-router-dom";
 import "./navigation.scss";
 
-function Navigation({ classNav }) {
+function Navigation({ classNav, classButton }) {
   return (
     <nav className={classNav}>
       <ul className="menu">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" className="nav-link">
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" className="nav-link">
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/team">Team</NavLink>
+          <NavLink to="/team" className="nav-link">
+            Team
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/process">Process</NavLink>
+          <NavLink to="/process" className="nav-link">
+            Process
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/pricing">Pricing</NavLink>
+          <NavLink to="/blog" className="nav-link">
+            Blog
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/blog">Blog</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink to="/contact" className={`nav-link ${classButton}`}>
+            Contact Us
+          </NavLink>
         </li>
       </ul>
     </nav>

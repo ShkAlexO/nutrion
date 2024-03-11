@@ -1,0 +1,13 @@
+@use "/src/assets/style/variables.scss" as *;
+
+.lastPosts {
+  padding: 100px 0 130px;
+  margin: 20px auto 0;
+  background-color: rgba($accent-color-2, 0.6);
+
+  &__inner {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    gap: 40px 25px;
+  }
+}
