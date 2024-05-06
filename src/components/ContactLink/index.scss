@@ -1,2 +1,21 @@
+@use "/src/assets/style/variables.scss" as *;
+
 .contactLink {
+  display: flex;
+  column-gap: 7px;
+  padding: 8px 15px;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: $global-radius;
+
+  &__icon {
+    display: block;
+    object-fit: contain;
+    width: 25px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+  }
 }

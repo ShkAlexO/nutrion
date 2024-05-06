@@ -1,0 +1,13 @@
+.blogPage {
+  &__categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  &__inner {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    gap: 40px 25px;
+  }
+}

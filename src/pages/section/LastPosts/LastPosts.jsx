@@ -1,14 +1,35 @@
-import Container from "../../../components/Container/Container";
-import Heading from "../../../components/Heading/Heading";
-import List from "../../../components/List/List";
-import BlogCard from "../../../components/BlogCard/BlogCard";
+import { useState, useEffect } from "react";
+import Container from "@c/Container/Container";
+import Heading from "@c/Heading/Heading";
+import List from "@c/List/List";
+import BlogCard from "@c/BlogCard/BlogCard";
 
-import { heading, blog } from "../../../services/services";
+import { apiPosts, getPosts, heading } from "@/services/services";
 
 import "./index.scss";
 
 function LastPosts() {
-  const lastTwoPosts = blog.slice(-2);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await getPosts(apiPosts);
+        setPosts(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, []);
+
+  if (loading || !posts.length) {
+    return null;
+  }
+
+  const lastTwoPosts = posts.slice(-2);
 
   return (
     <section className="lastPosts">

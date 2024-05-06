@@ -1,7 +1,9 @@
-import Container from "../../components/Container/Container";
-import Logo from "../../components/Logo/Logo";
-import Navigation from "../../components/Navigation/Navigation";
-import ContactLink from "../../components/ContactLink/ContactLink";
+import Container from "@c/Container/Container";
+import Logo from "@c/Logo/Logo";
+import Navigation from "@c/Navigation/Navigation";
+import ShadowBox from "@c/ShadowBox/ShadowBox";
+import ContactLink from "@c/ContactLink/ContactLink";
+import contactLinks from "@/services/contactData";
 
 import "./footer.scss";
 
@@ -12,19 +14,24 @@ function Footer() {
     <footer className="footer">
       <Container>
         <div className="footer__inner">
-          <Logo />
+          <div className="footer__inner-menu">
+            <Logo />
+            <Navigation classNav="footer__menu" />
+          </div>
 
-          <ContactLink></ContactLink>
+          <ShadowBox className="footer__info">
+            <div className="footer__contacts">
+              {contactLinks.map((link, index) => (
+                <ContactLink key={index} {...link} />
+              ))}
+            </div>
 
-          <Navigation classNav="footer__menu" />
+            <p className="footer__copyright">
+              ©{currentYear} Nutritionist. All rights reserved.
+            </p>
+          </ShadowBox>
         </div>
       </Container>
-
-      <div className="footer__copyright">
-        <Container>
-          <p>©{currentYear} Nutritionist. All rights reserved.</p>
-        </Container>
-      </div>
     </footer>
   );
 }

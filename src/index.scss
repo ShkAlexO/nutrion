@@ -100,6 +100,9 @@ section {
 
 .menu {
   font-family: $sub-font;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 40px;
 
   a {
     font-size: 24px;

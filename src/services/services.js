@@ -1,3 +1,13 @@
+const apiPosts = "https://64fdb2d8596493f7af7e766e.mockapi.io/blog";
+
+const getPosts = (apiUrl) =>
+  fetch(apiUrl).then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch posts");
+    }
+    return response.json();
+  });
+
 const heading = {
   features: {
     title: "Features",
@@ -8,6 +18,12 @@ const heading = {
     title: "Our latest news",
     subtitle:
       "Welcome to the Feature Section of Nutritionist, your ultimate destination for all things nutrition and wellness.",
+  },
+  blogPage: {
+    title:
+      "The Inspiring World of Health: Recipes, Diets, Sports and Vegetarianism",
+    subtitle:
+      "The Path to Health: Sports, Nutrition and Vegetarianism in One Blog",
   },
 };
 
@@ -50,25 +66,25 @@ const features = [
   },
 ];
 
-const blog = [
-  {
-    id: 1,
-    image: "/src/assets/images/blog/image-3.jpg",
-    title: "Carbohydrates, Proteins, and Fats",
-    text: "Get a comprehensive understanding of macronutrients and their role in your diet for optimal health and weight management.",
-  },
-  {
-    id: 2,
-    image: "/src/assets/images/blog/image-2.jpg",
-    title: "Cultivating a Healthy Relationship with Food",
-    text: "Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being. Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being. Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being.",
-  },
-  {
-    id: 3,
-    image: "/src/assets/images/blog/image-1.jpg",
-    title: "The Benefits of Hydration for Weight Loss",
-    text: "Discover how staying hydrated can support your weight loss goals and improve overall health. And improve overall health.",
-  },
-];
+// const blog = [
+//   {
+//     id: 1,
+//     image: "/src/assets/images/blog/image-3.jpg",
+//     title: "Carbohydrates, Proteins, and Fats",
+//     text: "Get a comprehensive understanding of macronutrients and their role in your diet for optimal health and weight management.",
+//   },
+//   {
+//     id: 2,
+//     image: "/src/assets/images/blog/image-2.jpg",
+//     title: "Cultivating a Healthy Relationship with Food",
+//     text: "Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being. Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being. Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being.",
+//   },
+//   {
+//     id: 3,
+//     image: "/src/assets/images/blog/image-1.jpg",
+//     title: "The Benefits of Hydration for Weight Loss",
+//     text: "Discover how staying hydrated can support your weight loss goals and improve overall health. And improve overall health.",
+//   },
+// ];
 
-export { heading, features, blog };
+export { apiPosts, getPosts, heading, features };

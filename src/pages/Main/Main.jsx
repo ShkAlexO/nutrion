@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../../routes/Home";
-import About from "../../routes/About";
-import Team from "../../routes/Team";
-import Process from "../../routes/Process";
-import Blog from "../../routes/Blog";
-import Category from "../../routes/Category";
-import Post from "../../routes/Post";
-import Contact from "../../routes/Contact";
-import NotFound from "../../routes/NotFound";
+import Home from "@/routes/Home/Home";
+import About from "@/routes/About/About";
+import Team from "@/routes/Team/Team";
+import Process from "@/routes/Process/Process";
+import Blog from "@/routes/Blog/Blog";
+import Category from "@/routes/Category/Category";
+import Post from "@/routes/Post/Post";
+import Contact from "@/routes/Contact/Contact";
+import NotFound from "@/routes/NotFound/NotFound";
 
 import "./main.scss";
 
